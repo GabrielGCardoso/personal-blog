@@ -4,11 +4,11 @@ title: "Gabriel G. Cardoso"
 description: "Technical Blog by Gabriel G. Cardoso"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: ""
+baseurl: "/personal-blog"
 include: ["_pages"]
 permalink: /:title/
 
-url: ""
+url: "https://gabrielgcardoso.github.io"
 
 # Authors
 authors:
