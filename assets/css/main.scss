@@ -70,12 +70,12 @@ h6[id]:hover .heading-anchor,
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	margin: 0.15rem 0 1.6rem;
+	margin: 0;
 }
 
 .post-byline .author-thumb {
-	width: 48px;
-	height: 48px;
+	width: 32px;
+	height: 32px;
 	margin: 0;
 	border-radius: 50%;
 	object-fit: cover;
@@ -83,20 +83,25 @@ h6[id]:hover .heading-anchor,
 
 .post-byline-meta {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 4px 10px;
 	line-height: 1.25;
 }
 
 .post-byline .post-name {
 	color: rgba(0, 0, 0, 0.84);
-	font-size: 0.95rem;
-	font-weight: 600;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-weight: 500;
 }
 
 .post-byline-sub {
 	color: rgba(0, 0, 0, 0.54);
-	font-size: 0.84rem;
-	margin-top: 2px;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	margin-top: 0;
 }
 
 .author-thumb {
@@ -124,4 +129,222 @@ h6[id]:hover .heading-anchor,
 	font-size: 0.7rem;
 	font-weight: 400;
 	white-space: nowrap;
+}
+
+/* Large monitors were bumping the root size to 18px and stretching the
+   container to 80% of the viewport, so type and line length grew together. */
+@media screen and (min-width: 1500px) {
+	html {
+		font-size: 16px;
+	}
+
+	.container {
+		max-width: 1140px;
+	}
+}
+
+.layout-post .site-content > .container > .mainheading {
+	display: none;
+}
+
+.layout-post .post-column {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 680px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.layout-post .mainheading {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.layout-post .mainheading h1.posttitle {
+	margin-bottom: 32px;
+	color: rgba(0, 0, 0, 0.84);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	font-size: 42px;
+	font-weight: 700;
+	letter-spacing: -0.011em;
+	line-height: 52px;
+}
+
+.layout-post .article-post {
+	max-width: 680px;
+	color: rgba(0, 0, 0, 0.84);
+	font-family: "Source Serif 4", Georgia, Cambria, "Times New Roman", Times, serif;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: -0.003em;
+	line-height: 32px;
+	text-align: left;
+}
+
+.layout-post .article-post p,
+.layout-post .article-post blockquote {
+	margin: 1.56em 0 0;
+}
+
+.layout-post .article-post h1,
+.layout-post .article-post h2,
+.layout-post .article-post h3,
+.layout-post .article-post h4,
+.layout-post .article-post h5,
+.layout-post .article-post h6 {
+	color: rgba(0, 0, 0, 0.9);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	letter-spacing: -0.016em;
+}
+
+.layout-post .article-post h2 {
+	margin: 1.95em 0 0.15em;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.layout-post .article-post h3 {
+	margin: 1.7em 0 0.15em;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 0;
+}
+
+.layout-post .article-post ul,
+.layout-post .article-post ol {
+	margin: 1.2em 0 0;
+	padding-left: 1.5em;
+}
+
+.layout-post .article-post li {
+	margin-bottom: 0.35em;
+}
+
+.layout-post .article-post li p {
+	margin-top: 0.35em;
+}
+
+.layout-post .featured-image,
+.layout-post .article-post img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-top: 1.4em;
+	margin-bottom: 0.4em;
+}
+
+.layout-post .post-share {
+	display: flex;
+	align-items: center;
+	margin-top: 32px;
+	margin-bottom: 8px;
+	padding: 4px 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.layout-post .post-share ul {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.layout-post .post-share li {
+	display: inline-flex;
+	margin: 0;
+}
+
+.layout-post .post-share a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	color: rgba(0, 0, 0, 0.55);
+}
+
+.layout-post .post-share a:hover {
+	background: rgba(0, 0, 0, 0.06);
+	color: rgba(0, 0, 0, 0.84);
+}
+
+.layout-post .post-share i {
+	border: 0;
+	width: auto;
+	height: auto;
+	font-size: 16px;
+	line-height: 1;
+}
+
+.layout-post .post-share .sep,
+.layout-post .post-share a[href="#disqus_thread"]:empty {
+	display: none;
+}
+
+@media (max-width: 727px) {
+	.layout-post .post-column {
+		padding-right: 4px;
+		padding-left: 4px;
+	}
+
+	.layout-post .mainheading h1.posttitle {
+		margin-bottom: 24px;
+		font-size: 32px;
+		letter-spacing: -0.014em;
+		line-height: 38px;
+	}
+
+	.layout-post .post-byline-meta {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2px;
+	}
+
+	.layout-post .article-post {
+		font-size: 18px;
+		letter-spacing: -0.003em;
+		line-height: 28px;
+	}
+
+	.layout-post .article-post h2 {
+		margin-top: 1.5em;
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0;
+	}
+
+	.layout-post .article-post h3 {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	body.layout-post {
+		padding-bottom: 64px;
+	}
+
+	.layout-post .post-share {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 30;
+		justify-content: space-evenly;
+		margin: 0;
+		padding: 6px 12px calc(6px + env(safe-area-inset-bottom));
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+		border-bottom: 0;
+		background: #fff;
+	}
+
+	.layout-post .post-share ul {
+		flex: 1;
+		justify-content: space-evenly;
+	}
 }

@@ -8,17 +8,12 @@ post_class: post-template
 <!-- Begin Article
 ================================================== -->
 <div class="container">
-    <div class="row">
-
-        <!-- Post Share -->
-        <div class="col-md-2 pl-0">
-            {% include share.html %}
-        </div>
+    <div class="row justify-content-center">
 
         <!-- Post -->
         {% assign author = site.authors[page.author] %}
 
-        <div class="col-md-9 flex-first flex-md-unordered">
+        <div class="post-column">
             <div class="mainheading">
 
                 <h1 class="posttitle">{{ page.title }}</h1>
@@ -44,6 +39,8 @@ post_class: post-template
                 {% endif %}
 
             </div>
+
+            {% include share.html %}
 
             <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
             {% if site.adsense == "enabled" %}
