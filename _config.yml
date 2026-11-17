@@ -29,7 +29,7 @@ plugins:
   - jekyll-embed-urls
   - jekyll-linkpreview
   - jekyll-mermaid
-  # - jekyll-compress-images
+  - jekyll-compress-images
 
 whitelist:
   - jekyll-paginate
@@ -40,13 +40,15 @@ whitelist:
   - jekyll-gist
   - jekyll-embed-urls
   - jekyll-linkpreview
-  # - jekyll-compress-images
+  - jekyll-compress-images
 
 gist:
   noscript: false
 
-# compress_images:
-#   images_path: "assets/images/**/*.{gif,png,jpg,jpeg,svg}"
+compress_images:
+  images_path: "assets/images/**/*.{gif,png,jpg,jpeg,svg}"
+  # Publica a cópia otimizada e deixa os arquivos em assets/images intactos.
+  overwrite_originals: false
 
 # Archives
 jekyll-archives:
